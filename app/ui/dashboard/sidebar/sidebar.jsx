@@ -11,6 +11,7 @@ import {
 } from "react-icons/md";
 import styles from './sidebar.module.css'
 import MenuLink from "./menuLink/menuLink";
+import Image from "next/image";
 
 const menuItems = [
   {
@@ -78,6 +79,13 @@ const menuItems = [
 const Sidebar = () => {
   return (
     <div className={styles.container}>
+      <div className={styles.user}>
+        <Image src="/noavatar.png" className={styles.userImage} width="50" height="50" alt="avatar" />
+        <div className={styles.userDetail}>
+          <span className={styles.userName}>Lutfi Maulana</span>
+          <span className={styles.userTitle}>Administrator</span>
+        </div>
+      </div>
       <ul>
         {menuItems.map(item=> (
           <li key={item.title}>

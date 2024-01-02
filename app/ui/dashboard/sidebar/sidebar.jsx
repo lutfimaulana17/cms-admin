@@ -86,7 +86,7 @@ const Sidebar = () => {
           <span className={styles.userTitle}>Administrator</span>
         </div>
       </div>
-      <ul>
+      <ul className={styles.list}>
         {menuItems.map(item=> (
           <li key={item.title}>
             <span className={styles.cat}>{item.title}</span>
